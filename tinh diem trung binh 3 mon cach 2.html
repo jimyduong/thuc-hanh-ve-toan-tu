@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh diem trung binh</title>
+</head>
+
+Diem Mon Toan:
+<br/><input id="DiemToan">
+<br/><br/>
+Diem Mon Li:
+<br/><input  id="DiemLi">
+<br/><br/>
+Diem Mon Hoa:
+<br/><input  id="DiemHoa">
+<br/><br/>
+<button onclick="Tinh()" id="Tinh">Tinh</button>
+<br/><br/>
+
+Diem Trung Binh La:<p id="Tong"></p>
+
+<SCRIPT>
+    function Tinh() {
+        let DiemToan = document.getElementById("DiemToan").value;
+        let DiemLi = document.getElementById("DiemLi").value;
+        let DiemHoa = document.getElementById("DiemHoa").value;
+        let T = document.getElementById("Tinh").value;
+
+        let Toan = parseFloat(DiemToan);
+        let Li = parseFloat(DiemLi);
+        let Hoa = parseFloat(DiemHoa);
+        let DTB = parseFloat(T);
+
+        DTB = (Toan + Li + Hoa) / 3;
+
+        document.getElementById("Tong").innerHTML = DTB;
+
+    }
+</SCRIPT>
+</body>
+</html>
